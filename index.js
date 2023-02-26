@@ -13,7 +13,7 @@ app.get("/", function rootHandler(req, res) {
 app.use(cors());
 app.use("/", indexRoutes);
 
-app.set("port", process.env.PORT || 4000);
+app.set("port", process.env.PORT || 80);
 console.log("Testing");
 
 /**
