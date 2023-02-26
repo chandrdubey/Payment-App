@@ -13,7 +13,8 @@ app.get("/", function rootHandler(req, res) {
 app.use(cors());
 app.use("/", indexRoutes);
 
-app.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT || 4000);
+console.log("Testing");
 
 /**
  * Start Express server.
