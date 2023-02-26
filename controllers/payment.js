@@ -3,8 +3,8 @@ const paymentService = require("../services/payment");
 module.exports = {
   payInvoice: async (req, res) => {
     try {
-      console.log(req.body);
-      console.log("🚀 ~ file: payment.js:7 ~ payInvoice: ~ req.body:", req);
+      console.log(req.body, req.params);
+      console.log("🚀 ~ file: payment.js:7 ~ payInvoice: ~ req.body:");
       const response = await paymentService.payInvoice(req.body.id);
       res.json(200, {
         success: true,

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+var bodyParser = require("body-parser");
 
 const cors = require("cors");
 
@@ -11,9 +12,10 @@ app.get("/", function rootHandler(req, res) {
   res.end("Hello world!");
 });
 app.use(cors());
+app.use(bodyParser.json());
 app.use("/", indexRoutes);
 
-app.set("port", process.env.PORT || 80);
+app.set("port", process.env.PORT || 4000);
 console.log("Testing");
 
 /**

@@ -14,10 +14,13 @@ module.exports = {
       data.email = invoice.email;
       data.webhook = process.env.BASE_URL + "/payments";
       data.setRedirectUrl(process.env.FRONTEND_URL);
+      console.log("🚀 ~ file: payment.js:17 ~ payInvoice: ~ data:", data);
       Insta.createPayment(data, function (error, response) {
         if (error) {
           // some error
         } else {
+          console.log("🚀 ~ file: payment.js:18 ~ response:", response);
+
           // Payment redirection link at response.payment_request.longurl
           return response;
         }
