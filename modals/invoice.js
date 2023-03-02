@@ -28,5 +28,9 @@ var invoiceSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+  paymentFee: {
+    type: Number,
+    default: null,
+  },
 });
 module.exports = mongoose.model("Invoice", invoiceSchema);
